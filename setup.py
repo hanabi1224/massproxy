@@ -32,7 +32,7 @@ settings.update(
     packages=['massproxy', ],
     install_requires=['requests>=2.0.0'],
     extras_require={'rsa': ['requests>=2.0.0']},
-    license='MIT',
+    license=massproxy.__license__,
     classifiers=(
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
