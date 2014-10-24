@@ -30,8 +30,8 @@ settings.update(
     author=massproxy.__author__,
     url='https://github.com/requests/massproxy',
     packages=['massproxy', ],
-    install_requires=['requests>=2.0.0'],
-    extras_require={'rsa': ['requests>=2.0.0']},
+    install_requires=['requests>=2.0.0', 'BeautifulSoup4>=4.0.0'],
+    extras_require={'rsa': ['requests>=2.0.0', 'BeautifulSoup4>=4.0.0']},
     license=massproxy.__license__,
     classifiers=(
         'Development Status :: 5 - Production/Stable',

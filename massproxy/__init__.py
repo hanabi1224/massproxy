@@ -16,7 +16,6 @@ __author__ = 'Hanabi1224'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2014 Hanabi1224'
 
-
 @singleton.singleton
 class ProxyProvider(BaseProxyProvider):
     def __init__(self):

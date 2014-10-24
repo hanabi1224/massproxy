@@ -58,11 +58,12 @@ class BaseProxyProvider(object):
                 break
         return result_set
 
-    def __get_all_proxies(self):
+    def _get_all_proxies(self):
         pass
 
     def __refresh_proxy_cache(self):
-        proxies = self.__get_all_proxies()
+        print(self)
+        proxies = self._get_all_proxies()
         if proxies:
             with open(self.cache_file_name, 'w') as fp:
                 for proxy in proxies:
