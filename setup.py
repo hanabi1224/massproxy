@@ -25,8 +25,8 @@ settings.update(
     name=APP_NAME,
     version=massproxy.__version__,
     description='Mass proxy crawler from public internet.',
-    long_description=open('README.rst').read() + '\n\n' +
-                     open('HISTORY.rst').read(),
+    long_description=open('README.md').read(),  # + '\n\n' +
+    #open('HISTORY.rst').read(),
     author=massproxy.__author__,
     url='https://github.com/requests/massproxy',
     packages=['massproxy', ],

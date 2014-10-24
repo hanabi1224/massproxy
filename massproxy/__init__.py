@@ -20,7 +20,6 @@ __copyright__ = 'Copyright 2014 Hanabi1224'
 class ProxyProvider(BaseProxyProvider):
     def __init__(self):
         self.providers = []
-        BaseProxyProvider.__init__(self)
 
     def refresh_proxies(self):
         if self.proxies and self.last_update_utc + timedelta(minutes=5) > datetime.utcnow():
@@ -44,7 +43,15 @@ class ProxyProvider(BaseProxyProvider):
 __instance = ProxyProvider()
 __instance.register_provider(CNProxyProvider())
 
+get_proxies = __instance.get_proxies
+get_proxies_iterator = __instance.get_proxies_iterator
+get_proxy_for = __instance.get_unblocked_proxy_for
+block_proxy_for = __instance.block_proxy_for
+register_provider = __instance.register_provider
+
 if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-    for proxy in ProxyProvider().get_proxies():
+    for proxy in get_proxies(3):
         print(proxy)
+
+    print(get_proxy_for('http://www.bing.com/'))

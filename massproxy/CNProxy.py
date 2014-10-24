@@ -15,9 +15,6 @@ import singleton
 
 @singleton.singleton
 class CNProxyProvider(BaseProxyProvider):
-    def __init__(self):
-        BaseProxyProvider.__init__(self)
-
     def _get_all_proxies(self):
         for i in range(1, 12):
             try:
